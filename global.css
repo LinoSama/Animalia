@@ -1,0 +1,255 @@
+/* IMPORTATION DE LA POLICE PACIFICO - REGULAR 400 (LOGO) */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/*  IMPORTATION DE LA POLICE DU RESTE DU SITE : QUICKSAND (LIGHT 300 - REGULAR 400 - MEDIUM 500 - SEMIBOLD 600 */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+/* POPPINS - REGULAR 400 ET SEMIBOLD 600 ITALIC */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap');
+
+/* START - PARAMETRES GLOBAUX */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* END - PARAMETRES GLOBAUX */
+
+/* START - PARAMETRES DE L'ELEMENT BODY */
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+/* END - PARAMETRES DE L'ELEMENT BODY */
+
+/* START - DECLARATIONS DES VARIABLES */
+:root{
+    --header-icon-font-size: 20px;
+    --paragraph-font-size: 1.2em;
+}
+/* END - DECLARATIONS DES VARIABLES */
+
+/* START - HEADER */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: bisque;
+}
+/* START - LOGO */
+.logo-container {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+/* FIN - LOGO */
+
+/* START - CONTENEUR DES LIENS DE NAVIGATION */
+
+.nav-links {
+    display: flex;
+}
+
+/* END - CONTENEUR DES LIENS DE NAVIGATION */
+
+/* START - MISE EN FORME DES LIENS DE NAVIGATION */
+
+.nav-links li {
+    list-style: none;
+    padding: 10px 15px; 
+}
+
+.nav-links li a:hover {
+    color: white;
+    background: black;
+    border-radius: 50px;
+}
+
+
+.nav-links li a {
+    color: #000000;
+    font-size: var(--header-icon-font-size);
+    font-weight: 400;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+/* END - MISE EN FORME DES LIENS DE NAVIGATION */
+
+/* START - CONTENEUR DES LIENS POUR LA GESTION DU COMPTE */
+
+.my-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 17px 30px;
+}
+
+/* END - CONTENEUR DES LIENS POUR LA GESTION DU COMPTE */
+
+/* START - MISE EN FORME DES LIENS POUR LA GESTION DU COMPTE */
+
+.my-space li {
+    list-style: none;
+}
+
+.my-space li a {
+    color: #000000;
+    font-size: var(--header-icon-font-size);
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px 13px;
+}
+
+.my-space li a:hover {
+    background: black;
+    color: white;
+    padding: 10px 13px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+/* END - MISE EN FORME DES LIENS POUR LA GESTION DU COMPTE */
+
+/* START - HEADER RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 1023px) {
+    #grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1fr;
+        grid-template-areas:
+            "header" 
+            "banner1"
+            "text-zone1"
+            "central"
+            "text-zone2"
+            "banner2"
+            "footer";
+    }
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center
+    }
+    .nav-links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* gap: 60px; */
+        /* padding: 17px 30px; */
+    }
+}
+
+/* END - HEADER RESPONSIVE DESIGN */
+
+/* END - HEADER */
+
+/* START - MISE EN FORME DU FOOTER */
+
+footer{
+    background-color: #24262b;
+    padding: 70px 0;
+    width: 100%;
+    height: 60%;
+
+}
+.container {
+    /* max-width: 1170px; */
+    margin: auto;
+    line-height: 1.5;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ul {
+    list-style: none;
+}
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.footer-col ul li a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;  
+}
+.footer-col .social-links a:hover {  
+    color: #24262b;
+    background-color: #ffffff;
+}
+#button-disposition {
+    text-align: center;
+    text-decoration: none;
+}
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+@media(max-width: 183px) {
+    .row{
+        flex-direction: column;
+    }
+}
+/* START - MISE EN FORME DU FOOTER */

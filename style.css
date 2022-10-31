@@ -1,0 +1,122 @@
+
+/* START - GRID */
+#grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.8fr 1.5fr 1.5fr 1.5fr 1fr;
+    grid-auto-rows: minmax(300px, auto);
+    grid-template-areas:
+        "header header header header"
+        "banner1 banner1 text-zone1 text-zone1"
+        "central central central central"
+        "text-zone2 text-zone2 banner2 banner2"
+        "footer footer footer footer";
+}
+
+/* END - GRID */
+
+/* START - POSITIONNING GRID CELL */
+header {
+    grid-area: header;
+}
+
+.banner1 {
+    grid-area: banner1;
+}
+
+.text-zone1 {
+    grid-area: text-zone1;
+    background-color: #f2a27efb;
+}
+
+.central {
+    grid-area: central;
+
+}
+
+.text-zone2 {
+    grid-area: text-zone2;
+    background-color: #f2a27efb;
+}
+.banner2 {
+    grid-area: banner2;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* END - POSITIONNING GRID CELL */
+
+/* START - BANNER 1 STYLING */
+    .banner1{
+        height: 600px;
+        width: 100%;
+    }
+    /* START - IMAGE 1 STYLING */
+    .image1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    } 
+    .text-zone1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text1 {
+        font-size: var(--paragraph-font-size);
+        text-align: justify;
+        padding: 20px;
+    }
+    /* END - IMAGE 1 STYLING */
+
+/* END - BANNER 1 STYLING */
+
+/* START - BANNER 2  */
+    .banner2{
+        height: 600px;
+        width: 100%;
+    }
+    /* START - IMAGE 2 STYLING */
+    .image2 {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    /* END - IMAGE 2 STYLING */
+    .text-zone2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text2 {
+        font-size: var(--paragraph-font-size);
+        padding: 20px;
+    }
+/* END - BANNER 2 */
+
+/* START - CENTRAL */
+    .central {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: bisque;
+    }
+    .central-text {
+        font-size: var(--paragraph-font-size);
+        padding: 30px;
+        display: inline-block;
+    }
+    .central-image-container{
+        width: 600px;
+        height: auto;
+        display: inline-block;
+    }
+    .central-image {
+        width: 100%;
+        object-fit: cover;
+    }
+/* END - CENTRAL */
+
